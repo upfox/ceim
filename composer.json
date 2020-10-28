@@ -1,0 +1,16 @@
+{
+    "name": "upfox/html",
+    "description": "Projeto básico",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Flávio",
+            "email": "flavio@upfox.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "coffeecode/router":"*",
+        "coffeecode/datalayer":"*"
+    }
+}

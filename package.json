@@ -1,0 +1,11 @@
+{
+  "name": "ceim",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Flávio <flavio@upfox.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1"
+  }
+}
