@@ -13,7 +13,7 @@
             <div id="welcome"></div>
         </header>
         <main>
-            <div class="aside left"><img src="src/assets/images/study.svg"></div>
+            <div class="aside left"><img src="src/assets/images/study.png"></div>
             <div class="aside right">Right</div>
         </main>
         
@@ -40,7 +40,7 @@
     // Inicia a ação depois de x tempo [execução programada]
     setTimeout(()=>{
         let target = document.getElementById("welcome");
-        target.innerHTML = 'Bem-vindo a minha primeira página em php';
+        target.innerHTML = '<b>Bem-vindo a minha primeira página em php</b>';
         seconds2('flavio');
     },seconds(1));
 

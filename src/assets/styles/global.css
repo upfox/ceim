@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,900;1,100;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font: 20px 'Poppins', sans-serif;
+}
+b, strong{
+    font-weight: 600;
 }
 body{
     width: 100vw;
     height: 100vh;
-    background: #171717;
-    color: #f1f6f0;
+    background: #f1f6f0;
+    color: #332;
 }
 body .container{
     padding:2%;
@@ -18,15 +24,31 @@ body .container{
     display: flex;
     flex-direction: column;
 }
-body header, body footer{
+body header, 
+body footer{
     display: flex;
-    border: 5px red dotted;
     align-items: center;
     justify-content: center;
+    
 }
+
+body header{
+    background-color: #bde;
+    border-radius: 25px;
+    padding: 5px;
+}
+
 body footer{
     justify-content: end;
 }
+
+/* Div HORA */
+
+div#hora{
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
 body main{
     width: 100%;
     height: 100%;
@@ -34,7 +56,6 @@ body main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 10px solid pink;
     align-self: stretch;
     overflow: hidden;
 }
@@ -44,5 +65,9 @@ body .container .aside{
     height: 100%;
     justify-content: center;
     align-items: center;
-    border: 4px solid green;
+}
+
+body .container .aside img{
+    width: 70%;
+    height:100%;
 }
