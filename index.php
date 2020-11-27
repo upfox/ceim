@@ -14,9 +14,30 @@
         </header>
         <main>
             <div class="aside left"><img src="src/assets/images/study.png"></div>
-            <div class="aside right">Right</div>
+            <div class="aside right">
+
+                <div class="form">
+                    <form action="" method="post">
+                        <header>CADASTRO ALUNOS</header>
+                        <section>
+                            <div class="line">
+                                <input type="text" name="" id="txtName" value="" placeholder="">
+                                <label for="txtName">Nome completo</label>
+                            </div>
+                            <div class="line">
+                                <input type="text" name="" id="txtDtnasc" value="" placeholder="">
+                                <label for="txtDtnasc">Data de nascimento</label>
+                            </div>
+                        </section>
+                        <footer>
+                            <button type="button">Cadastrar</button>
+                            <button type="reset">Limpar</button>
+                        </footer>
+                    </form>
+                </div>
+
+            </div>
         </main>
-        
         <footer>
             <div id="hora"></div>
         </footer>
@@ -42,7 +63,7 @@
         let target = document.getElementById("welcome");
         target.innerHTML = '<b>Bem-vindo a minha primeira página em php</b>';
         seconds2('flavio');
-    },seconds(1));
+    },seconds(0));
 
     // Reinicia a ação de tanto em tanto tempo. [loop]
     setInterval(()=>{

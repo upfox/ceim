@@ -12,37 +12,73 @@ b, strong{
 body{
     width: 100vw;
     height: 100vh;
-    background: #f1f6f0;
-    color: #332;
+    background:#171717;
+    color: #ccc;
 }
 body .container{
-    padding:2%;
+    padding:1%;
 
     width: 100%;
     height: 100%;
+    min-height: 100%;
 
     display: flex;
     flex-direction: column;
+    background-color: #171717;
+
 }
-body header, 
-body footer{
+body .container > header, 
+body .container > footer{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
 
-body header{
-    background-color: #bde;
-    border-radius: 25px;
+body .container > header{
+    background-color: #333;
+    border-radius: 5px;
     padding: 5px;
+    border-bottom: 4px solid lime;
+}
+body  .container > header:before{
+    content: '# ';
+    color: lime;
 }
 
-body footer{
-    justify-content: end;
+body  .container > footer{
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    color: #f6f1ff;
+    font-weight: 600;
+    width: 100%;
+    max-height: 1px;
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: .7;
+    border-top:5px solid black;
+    transition: 1s;
+    padding-right: 10px;
 }
-
+body  .container > footer:hover{
+    height: auto;
+    max-height: 100px;
+    opacity: 1;
+}
 /* Div HORA */
+
+.left{
+    display: none !important;
+}
+
+@media (min-width: 700px) { 
+   .left{
+       display: flex !important;
+    }
+}
 
 div#hora{
     font-family: 'Roboto Slab', serif;
@@ -68,6 +104,130 @@ body .container .aside{
 }
 
 body .container .aside img{
-    width: 70%;
-    height:100%;
+    width: 50%;
+    height:50%;
+}
+
+body .container .form{
+    
+    display: flex;
+    box-sizing: border-box;
+    max-width: 400px;
+    width:100%;
+    padding: 10px;
+}
+
+body .container .form form *{
+    font-size: 14px;
+    border-radius: 0;
+    border: none;
+    color: #f1f0f6;
+}
+
+body .container .form form{
+    
+    width: 80vw;
+    height: 50vh;
+    padding: .5rem;
+    border: 5px solid rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+body .container .form form > header{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: .90rem;
+}
+body .container .form form .line{
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+body .container .form form .line label{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    display: inline-flex;
+    height: 40px;
+    line-height: 40px;
+    min-width: 100px;
+    border-radius: 5px;
+    transition:.6s;
+    justify-content: left;
+    align-content: center;
+    background-color: #333;
+}
+body .container .form form .line input:placeholder-shown + label{
+    border-right: 10px solid salmon;
+}
+body .container .form form .line input:not(:placeholder-shown) + label{
+    border-right: 10px solid lime;
+}
+body .container .form form .line input:not(:placeholder-shown) + label:hover{
+    opacity: 0;
+}
+body .container .form form .line input:not(:placeholder-shown) + label:after{
+    content: 'Ok';
+    padding-right:5px;
+    color: lime;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+body .container .form form .line input[type="text"]:focus + label{
+    margin-top: -40px;
+    /* border-radius: 0; */
+    opacity: .1;
+}
+
+body .container .form form .line input[type="text"],
+body .container .form form .line input[type="number"],
+body .container .form form .line input[type="password"]{
+    width: 100%;
+    padding: 0 10px;
+    background-color: #222;
+    display: inline-flex;
+    height: 40px;
+    line-height: 40px;
+    min-width: 100px;
+    border-radius: 5px;
+    transition:.4s;
+    justify-content: center;
+    align-content: center;
+}
+
+
+body .container .form form input[type="text"]:focus,
+body .container .form form input[type="number"]:focus,
+body .container .form form input[type="password"]:focus{
+    background: lightpink;
+    /* border: 1px solid tomato; */
+    color: tomato;
+}
+
+body .container .form form button{
+    background-color: #f1f0f6;
+    color: #333;
+    display: inline-flex;
+    height: 40px;
+    line-height: 40px;
+    min-width: 100px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition:.4s;
+    justify-content: center;
+    align-content: center;
+    
+
+}
+body .container .form form button:hover{
+    background-color: #333;
+}
+
+body .container .form form button:active{
+    background-color: silver;
 }
