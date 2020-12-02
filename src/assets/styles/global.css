@@ -143,6 +143,8 @@ body .container .form form .line{
     position: relative;
     overflow: hidden;
     margin-top: 10px;
+    display: flex;
+
 }
 body .container .form form .line label{
     width: 100%;
@@ -159,34 +161,23 @@ body .container .form form .line label{
     justify-content: left;
     align-content: center;
     background-color: #333;
+    z-index: 2;
 }
-body .container .form form .line input:placeholder-shown + label{
-    border-right: 10px solid salmon;
+body .container .form form .line input + label{
+    border: 1px dashed salmon;
 }
-body .container .form form .line input:not(:placeholder-shown) + label{
-    border-right: 10px solid lime;
-}
-body .container .form form .line input:not(:placeholder-shown) + label:hover{
-    opacity: 0;
-}
-body .container .form form .line input:not(:placeholder-shown) + label:after{
-    content: 'Ok';
-    padding-right:5px;
-    color: lime;
-    display: block;
-    position: absolute;
-    right: 0;
+/* body .container .form form .line input:not(:placeholder-shown) + label{ */
+body .container .form form .line input:not(:value-shown) + label{
+    display: none;
 }
 
-body .container .form form .line input[type="text"]:focus + label{
+body .container .form form .line input:focus + label{
     margin-top: -40px;
     /* border-radius: 0; */
     opacity: .1;
 }
 
-body .container .form form .line input[type="text"],
-body .container .form form .line input[type="number"],
-body .container .form form .line input[type="password"]{
+body .container .form form .line input{
     width: 100%;
     padding: 0 10px;
     background-color: #222;
@@ -198,15 +189,53 @@ body .container .form form .line input[type="password"]{
     transition:.4s;
     justify-content: center;
     align-content: center;
+    padding-right: 40px;
 }
 
 
-body .container .form form input[type="text"]:focus,
-body .container .form form input[type="number"]:focus,
-body .container .form form input[type="password"]:focus{
+body .container .form form input:focus:placeholder-shown{
     background: lightpink;
-    /* border: 1px solid tomato; */
     color: tomato;
+}
+body .container .form form input + label + span{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    opacity: 1;
+    transition: .4s;
+    justify-content: center;
+    align-content: center;
+    background-color: none;
+    position: absolute;  
+    right:0;
+    top: 0;
+    z-index: 0;
+}
+body .container .form form input[type="text"]:not(:placeholder-shown) + label + span:after{
+    content: '\2714';
+    color: limegreen;
+    border: 2px solid limegreen;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+body .container .form form input[type="text"]:placeholder-shown + label + span:after{
+    content: '\2715'; 
+    color: maroon;
+    border: 2px solid maroon;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
 }
 
 body .container .form form button{

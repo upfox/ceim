@@ -23,10 +23,12 @@
                             <div class="line">
                                 <input type="text" name="" id="txtName" value="" placeholder="">
                                 <label for="txtName">Nome completo</label>
+                                <span class='hide'></span>
                             </div>
                             <div class="line">
-                                <input type="text" name="" id="txtDtnasc" value="" placeholder="">
+                                <input type="date" name="" id="txtDtnasc" value="" placeholder="">
                                 <label for="txtDtnasc">Data de nascimento</label>
+                                <span></span>
                             </div>
                         </section>
                         <footer>
