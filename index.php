@@ -1,3 +1,6 @@
+<?php
+    $dados = $_POST;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,20 +24,31 @@
                         <header>CADASTRO ALUNOS</header>
                         <section>
                             <div class="line">
-                                <input type="text" name="" id="txtName" value="" placeholder="">
+                                <input type="text" id="txtName" name="txtName" value="" placeholder="" required>
                                 <label for="txtName">Nome completo</label>
                                 <span class='hide'></span>
                             </div>
                             <div class="line">
-                                <input type="date" name="" id="txtDtnasc" value="" placeholder="">
+                                <input type="date" name="txtDtnasc" id="txtDtnasc" value="" placeholder="" required>
                                 <label for="txtDtnasc">Data de nascimento</label>
+                                <span></span>
+                            </div>
+                            <div class="line">
+                                <input type="radio" id="male" name="gender" value="male" class="out" required> <label for="male">Masculino</label>
+                                <input type="radio" id="female" name="gender" value="female"class="out"> <label for="female">Feminino</label>
+                                <input type="radio" id="other" name="gender" value="other" class="out" checked> <label for="other">Outro</label>
                                 <span></span>
                             </div>
                         </section>
                         <footer>
-                            <button type="button">Cadastrar</button>
+                            <button type="submit">Cadastrar</button>
                             <button type="reset">Limpar</button>
                         </footer>
+                        <section class="datas">
+                            <article>
+                                <?=print_r($dados,true)?>
+                            </article>
+                        </section>
                     </form>
                 </div>
 
